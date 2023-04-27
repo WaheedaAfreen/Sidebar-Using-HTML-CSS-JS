@@ -1,0 +1,137 @@
+
+/* =============================================NEW*/
+.pic-text {
+    display: none;
+}
+
+
+* {
+    font-family: "monospace", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(206, 209, 174);
+}
+
+.main {
+    position: fixed;
+    height: 100vh;
+    background-color: rgb(238, 200, 153);
+    width: 100px;
+    border: 5px solid rgb(205, 151, 214);
+    transition: .4s linear;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.top {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.pic {
+    display: flex;
+
+    align-items: center;
+}
+
+.pic img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+
+.pic-text {
+
+    font-size: 30px;
+    font-weight: 500px;
+    color: black;
+}
+
+.sidebar {
+    position: absolute;
+    top: 50%;
+    right: -27px;
+    transform: translateY(-50%);
+    color: rgb(7, 7, 7);
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(195, 214, 220);
+    border-radius: 50%;
+    transition: .4s linear;
+    cursor: pointer;
+}
+
+.sidebar:hover {
+    background-color: beige;
+    color: rgb(177, 80, 170);
+}
+
+.main.active {
+    width: 300px;
+}
+
+.main.active .sidebar {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.link span {
+    opacity: 0;
+    transition: .4s linear;
+
+}
+
+.main.active .link span {
+    opacity: 1;
+    transition: .4s linear;
+}
+
+.sidebar-link {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: rgb(232, 241, 241);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+
+}
+
+.sidebar-link i {
+    min-width: 55px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.sidebar-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: rgb(198, 240, 154);
+    z-index: -1;
+    transition: .4s;
+}
+
+.sidebar-link:hover::before {
+    width: 100%;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 100Px);
+}
+
